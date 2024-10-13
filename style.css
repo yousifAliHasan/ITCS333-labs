@@ -1,14 +1,3 @@
-@media (max-width : 600px){
-    body {
-           font-size: 14px;
-       }
-}
-
-@media (max-width : 901px){
-   body {
-          font-size: 18px;
-      }
-}
 /* Reset default margin and padding */
 * {
     margin: 0;
@@ -40,9 +29,10 @@ a:hover {
 header {
     background: linear-gradient(135deg, #FF6F61, #FFB3B3); /* Gradient background */
     text-align: center;
-    padding: 40px 0; /*  padding for a bold header */
+    padding: 40px 0; /* Generous padding for a bold header */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
     border-bottom: 5px solid #FFB3B3; /* Bold bottom border */
+    animation: slideIn 0.5s ease; /* Slide-in animation for header */
 }
 
 @keyframes slideIn {
@@ -215,9 +205,15 @@ footer:hover {
 /* Remove markers from specific lists */
 #announcements,
 #parent-resources {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    padding: 20px; /* Increased padding for a snug fit */
+    text-align: center;
+    margin: 20px auto; /* Adjusted margin for spacing */
+    border-radius: 15px; /* Rounded corners for containers */
+    max-width: 90%; /* Responsive width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    background-color: #FEFFA7; /* Soft pastel yellow background */
+    border: none; /* Remove border for a cleaner look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
 }
 
 /* Styles for List Items */
