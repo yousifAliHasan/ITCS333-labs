@@ -9,90 +9,230 @@
           font-size: 18px;
       }
 }
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* General Styles */
 body {
-    margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif; 
-    background-color: #f0f8ff; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+    background-color: #E0F7FA; /* Light pastel blue background */
+    color: #333; /* Dark gray text color for readability */
+    line-height: 1.6; /* Improved line height for readability */
 }
 
+/* WebKit Link Styles */
+a {
+    color: #333; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+}
 
+a:hover {
+    color: #FF6F61; /* Change link color on hover */
+    transform: scale(1.05); /* Slightly enlarge link on hover */
+}
+
+/* Header Styles */
 header {
-    background-color: #ecf400; 
+    background: linear-gradient(135deg, #FF6F61, #FFB3B3); /* Gradient background */
     text-align: center;
-    padding: 20px 0;
-    border-bottom: 5px solid #ff9800; 
+    padding: 40px 0; /*  padding for a bold header */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    border-bottom: 5px solid #FFB3B3; /* Bold bottom border */
 }
 
-header h2 {
-    color: #82e22f; 
-    font-size: 36px;
-    margin: 0;
-    text-shadow: 2px 2px #ff9800; 
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-
-#nav {
-    margin-top: 20px;
+header h1 {
+    color: #FFFFFF; /* White text color for contrast */
+    font-size: 36px; /* Header font size */
+    margin-bottom: 10px; /* Space below the header */
 }
 
+/* Navigation Styles */
 nav ul {
     list-style-type: none; 
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center navigation */
+    margin: 20px 0; /* Vertical margin */
 }
 
 nav ul li {
-    margin: 0 20px;
-    background-color: #8bc34a; 
-    padding: 15px 30px;
-    border-radius: 20px; 
-    font-size: 18px;
-    color: white;
-    cursor: pointer; 
-    transition: background-color 0.3s, transform 0.3s; 
+    margin: 0 15px; /* Horizontal margin */
+    background-color: #FFB3B3; /* Soft pink background */
+    padding: 12px 20px; /* Padding for buttons */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px;
+    color: #333; /* Dark text for readability */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Smooth transitions */
 }
 
 nav ul li:hover {
-    background-color: #4caf50; 
-    transform: scale(1.1); 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    background-color: #FF6F61; /* Bright coral on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    filter: brightness(1.1); /* Brighten the button on hover */
 }
 
-#container {
-    background-color: #c5eb09;
-    padding: 30px;
+/* Box-like Container Styles */
+.container {
+    padding: 20px; /* Increased padding for a snug fit */
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    margin: 0 auto;
-    transition: transform 0.3s, background-color 0.3s;
-
+    margin: 20px auto; /* Adjusted margin for spacing */
+    border-radius: 15px; /* Rounded corners for containers */
+    max-width: 90%; /* Responsive width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    background-color: #FEFFA7; /* Soft pastel yellow background */
+    border: none; /* Remove border for a cleaner look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
 }
 
-
-#container h2 {
-    color: #ff5722;
-    font-size: 28px;
-    text-shadow: 2px 2px #ff9800;
+.container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
-#container p {
-    color: #333;
-    font-size: 18px;
-    line-height: 1.6;
+/* Container Headings */
+.container h2 {
+    color: #FF6F61; /* Bright coral heading color */
+    font-size: 24px; /* Slightly smaller heading font size */
+    margin: 10px 0; /* Space below headings */
 }
-#container1 {
-    background-color: #ffc400;
-    padding: 30px;
+
+/* Container Paragraphs */
+.container p {
+    font-size: 16px; /* Adjusted paragraph font size */
+    margin-bottom: 15px; /* Spacing below paragraphs */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.container:hover p {
+    transform: translateY(-2px); /* Move text up slightly on container hover */
+}
+
+/* Table Styles */
+table {
+    width: 80%; /* Set to 80% to reduce overall width */
+    border-collapse: collapse; /* Remove space between borders */
+    margin: 20px auto; /* Center the table */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensure rounded corners are applied */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+table:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+th, td {
+    border: none; /* Remove borders for a cleaner look */
+    padding: 12px; /* Increased padding for better spacing */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Header Styles */
+th {
+    background-color: #FFB3B3; /* Soft pink background for headers */
+    color: #333; /* Dark text for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+/* Row Styles */
+tr {
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+tr:nth-child(even) {
+    background-color: #F6FDC3; /* Light greenish-yellow for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF; /* White for odd rows */
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #FF6F61; /* Coral highlight on hover */
+    color: #FFFFFF; /* Change text color to white on hover */
+}
+
+td {
+    color: #333; /* Dark text for cells */
+}
+
+/* Gallery Styles */
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap */
+    justify-content: center; /* Center images */
+    gap: 15px; /* Space between images */
+}
+
+.gallery-images img {
+    border-radius: 10px; /* Rounded corners for images */
+    width: 150px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling effect */
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Footer Styles */
+footer {
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    margin: 0 auto;
-    transition: transform 0.3s, background-color 0.3s;
-
+    padding: 20px 0; /* Increased padding for footer */
+    background: linear-gradient(135deg, #FFB3B3, #FF6F61); /* Gradient background */
+    color: #333; /* Dark gray text color */
+    margin-top: 20px; /* Space above footer */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background 0.3s ease; /* Smooth background transition */
 }
-#container1 h2{
-    color: #ed4967;
+
+footer:hover {
+    background: linear-gradient(135deg, #FF6F61, #FF8A80); /* Change gradient on hover */
+}
+
+/* Remove markers from specific lists */
+#announcements,
+#parent-resources {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Styles for List Items */
+#announcements li,
+#parent-resources li {
+    padding: 10px; /* Add padding for better spacing */
+    margin: 5px 0; /* Space between list items */
+    background-color: #FFCFB3; /* Light yellow background for list items */
+    border-radius: 8px; /* Rounded corners for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for effects */
+}
+
+#announcements li:hover,
+#parent-resources li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
